@@ -1,7 +1,9 @@
+import { Lobby } from "./components/Lobby/Lobby";
+
 function App() {
   return (
     <>
-      <div>hola</div>
+      <Lobby />
     </>
   );
 }
