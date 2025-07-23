@@ -1,7 +1,7 @@
 import useLobbyInfo from "../../hooks/useLobbyInfo";
 
 export const Lobby = () => {
-  const images = ["lobby1.png", "/lobby2.png", "/lobby3.png"];
+  const images = ["lobby1.png", "lobby2.png", "lobby3.png"];
   const titles = [
     "Aquí recargas, envías y pagas, como y cuando quieras",
     "Con tu tarjeta MOVii, compra lo que sea en cualquier lugar",
