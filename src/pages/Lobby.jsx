@@ -1,7 +1,9 @@
-import useLobbyInfo from "../../hooks/useLobbyInfo";
+import { useNavigate } from "react-router-dom";
+import useLobbyInfo from "../hooks/useLobbyInfo";
 
 export const Lobby = () => {
-  // Fondos y títulos del lobby
+  const navigate = useNavigate();
+
   const images = [
     `${import.meta.env.BASE_URL}lobby1.png`,
     `${import.meta.env.BASE_URL}lobby2.png`,
@@ -14,7 +16,6 @@ export const Lobby = () => {
     "En MOVii sabemos cómo ser tu primer no banco",
   ];
 
-  // Hook loop de fondo y título
   const { indexInfo } = useLobbyInfo();
 
   return (
@@ -23,8 +24,12 @@ export const Lobby = () => {
         <h1 className="lobby-title">{titles[indexInfo]}</h1>
 
         <div className="lobby-button-container">
-          <button className="lobby-button-1">Crear tu cuenta gratis</button>
-          <button className="lobby-button-2">Entrar a tu cuenta</button>
+          <button className="lobby-button-1" onClick={() => navigate("crear-cuenta")}>
+            Crear tu cuenta gratis
+          </button>
+          <button className="lobby-button-2" onClick={() => navigate("ingresar")}>
+            Entrar a tu cuenta
+          </button>
         </div>
       </section>
     </div>
