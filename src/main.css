@@ -314,7 +314,6 @@ button {
 }
 
 .welcome-section {
-  background-image: url(/Source/public/auth-image.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -4,6 +4,7 @@ import backButtonWhite from "../assets/back-button-wht.svg";
 import backButton from "../assets/back-button.svg";
 import moviiLogo from "../assets/movii-logo.svg";
 import deleteButton from "../assets/delete-button.svg";
+import backgroundImage from "../assets/auth-image.png";
 
 export const AuthPage = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export const AuthPage = () => {
 
   return (
     <div className={`auth-page ${inputFocused ? "keyboard-active" : ""}`}>
-      <div className="welcome-section">
+      <div className="welcome-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <header>
           <button className="auth-page-back-button" onClick={() => navigate(-1)}>
             <img src={backButtonWhite} alt="back" />
