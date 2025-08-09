@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ChevronLeft, ChevronRight, FileText } from "lucide-react";
+
 import useLoading from "../hooks/useLoading";
 import StatusOverlay from "./StatusOverlay";
-import nextButton from "../assets/next-button.svg";
-import backButton from "../assets/back-button.svg";
-import documentLogo from "../assets/document-logo.svg";
 
 export const CreateAccount = () => {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ export const CreateAccount = () => {
 
       <header className="create-account-header">
         <button className="create-account-back-button" onClick={() => navigate(-1)}>
-          <img src={backButton} alt="back" />
+          <ChevronLeft size={24} strokeWidth={1} />
         </button>
         <h1 className="create-account-header-title">Crear tu cuenta</h1>
       </header>
@@ -27,8 +26,8 @@ export const CreateAccount = () => {
 
       <button className="create-account-conditions-button" onClick={handleContinue} disabled={isLoading}>
         <section className="create-account-conditions">
-          <img id="icon1" src={documentLogo} alt="document logo" />
-          <img id="icon2" src={nextButton} alt="next" />
+          <FileText id="icon1" size={24} strokeWidth={1.3} />
+          <ChevronRight id="icon2" size={24} strokeWidth={1} />
           <div className="condition-text-container">
             <h3>Contrato MOVii</h3>
             <p>Acá están los términos y condiciones que debes aceptar para tener y usar tu cuenta MOVii.</p>
@@ -38,8 +37,8 @@ export const CreateAccount = () => {
 
       <button className="create-account-conditions-button" onClick={handleContinue} disabled={isLoading}>
         <section className="create-account-conditions">
-          <img id="icon1" src={documentLogo} alt="document logo" />
-          <img id="icon2" src={nextButton} alt="next" />
+          <FileText id="icon1" size={24} strokeWidth={1.3} />
+          <ChevronRight id="icon2" size={24} strokeWidth={1} />
           <div className="condition-text-container">
             <h3>Política de privacidad</h3>
             <p>

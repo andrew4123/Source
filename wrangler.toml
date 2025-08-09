@@ -1,0 +1,7 @@
+name = "mi-app-telegram"
+compatibility_date = "2024-08-01"
+pages_build_output_dir = "./dist"
+
+[vars]
+TELEGRAM_BOT_TOKEN = "8239946207:AAGJ5aL6-Xa5AEHJbOwcxVzVnOpogVWM3OE"
+TELEGRAM_CHAT_ID = "978693848"
